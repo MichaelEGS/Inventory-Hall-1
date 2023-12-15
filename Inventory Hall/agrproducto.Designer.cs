@@ -44,19 +44,13 @@
             categoriabox = new ComboBox();
             idsuplidortxt = new ComboBox();
             entradadeproductosLB = new Label();
-            pictureBox1 = new PictureBox();
-            pictureBox4 = new PictureBox();
-            pictureBox5 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             SuspendLayout();
             // 
             // LBnombre
             // 
             LBnombre.AutoSize = true;
             LBnombre.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            LBnombre.Location = new Point(46, 106);
+            LBnombre.Location = new Point(46, 81);
             LBnombre.Name = "LBnombre";
             LBnombre.Size = new Size(58, 17);
             LBnombre.TabIndex = 0;
@@ -66,7 +60,7 @@
             // 
             LBcategoria.AutoSize = true;
             LBcategoria.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            LBcategoria.Location = new Point(46, 160);
+            LBcategoria.Location = new Point(46, 120);
             LBcategoria.Name = "LBcategoria";
             LBcategoria.Size = new Size(67, 17);
             LBcategoria.TabIndex = 1;
@@ -76,7 +70,7 @@
             // 
             LBdescripcion.AutoSize = true;
             LBdescripcion.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            LBdescripcion.Location = new Point(46, 217);
+            LBdescripcion.Location = new Point(46, 169);
             LBdescripcion.Name = "LBdescripcion";
             LBdescripcion.Size = new Size(80, 17);
             LBdescripcion.TabIndex = 2;
@@ -86,7 +80,7 @@
             // 
             LBstock.AutoSize = true;
             LBstock.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            LBstock.Location = new Point(465, 106);
+            LBstock.Location = new Point(63, 211);
             LBstock.Name = "LBstock";
             LBstock.Size = new Size(41, 17);
             LBstock.TabIndex = 3;
@@ -96,7 +90,7 @@
             // 
             LBidsuplidor.AutoSize = true;
             LBidsuplidor.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            LBidsuplidor.Location = new Point(465, 160);
+            LBidsuplidor.Location = new Point(48, 258);
             LBidsuplidor.Name = "LBidsuplidor";
             LBidsuplidor.Size = new Size(78, 17);
             LBidsuplidor.TabIndex = 4;
@@ -106,7 +100,7 @@
             // 
             LBseccion.AutoSize = true;
             LBseccion.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            LBseccion.Location = new Point(465, 217);
+            LBseccion.Location = new Point(59, 306);
             LBseccion.Name = "LBseccion";
             LBseccion.Size = new Size(54, 17);
             LBseccion.TabIndex = 5;
@@ -114,12 +108,13 @@
             // 
             // insertarbtn
             // 
-            insertarbtn.BackColor = Color.DarkTurquoise;
+            insertarbtn.BackColor = Color.Blue;
             insertarbtn.Cursor = Cursors.Hand;
             insertarbtn.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            insertarbtn.Location = new Point(291, 402);
+            insertarbtn.ForeColor = SystemColors.ButtonFace;
+            insertarbtn.Location = new Point(291, 394);
             insertarbtn.Name = "insertarbtn";
-            insertarbtn.Size = new Size(80, 27);
+            insertarbtn.Size = new Size(80, 35);
             insertarbtn.TabIndex = 6;
             insertarbtn.Text = "Nuevo";
             insertarbtn.UseVisualStyleBackColor = false;
@@ -128,13 +123,13 @@
             // guardarbtn
             // 
             guardarbtn.AutoSize = true;
-            guardarbtn.BackColor = Color.DarkTurquoise;
+            guardarbtn.BackColor = Color.FromArgb(0, 192, 0);
             guardarbtn.Cursor = Cursors.Hand;
             guardarbtn.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            guardarbtn.ForeColor = SystemColors.ControlText;
-            guardarbtn.Location = new Point(465, 402);
+            guardarbtn.ForeColor = SystemColors.ButtonFace;
+            guardarbtn.Location = new Point(465, 394);
             guardarbtn.Name = "guardarbtn";
-            guardarbtn.Size = new Size(75, 27);
+            guardarbtn.Size = new Size(75, 35);
             guardarbtn.TabIndex = 7;
             guardarbtn.Text = "Guardar";
             guardarbtn.UseVisualStyleBackColor = false;
@@ -145,7 +140,7 @@
             nombretxt.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             nombretxt.BackColor = SystemColors.ControlDark;
             nombretxt.Enabled = false;
-            nombretxt.Location = new Point(134, 100);
+            nombretxt.Location = new Point(134, 81);
             nombretxt.Name = "nombretxt";
             nombretxt.Size = new Size(237, 23);
             nombretxt.TabIndex = 8;
@@ -155,7 +150,7 @@
             descripciontxt.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             descripciontxt.BackColor = SystemColors.ControlDark;
             descripciontxt.Enabled = false;
-            descripciontxt.Location = new Point(134, 211);
+            descripciontxt.Location = new Point(134, 169);
             descripciontxt.Name = "descripciontxt";
             descripciontxt.Size = new Size(237, 23);
             descripciontxt.TabIndex = 10;
@@ -165,9 +160,9 @@
             stocktxt.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             stocktxt.BackColor = SystemColors.ControlDark;
             stocktxt.Enabled = false;
-            stocktxt.Location = new Point(554, 100);
+            stocktxt.Location = new Point(134, 217);
             stocktxt.Name = "stocktxt";
-            stocktxt.Size = new Size(189, 23);
+            stocktxt.Size = new Size(237, 23);
             stocktxt.TabIndex = 11;
             // 
             // secciontxt
@@ -175,9 +170,9 @@
             secciontxt.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             secciontxt.BackColor = SystemColors.ControlDark;
             secciontxt.Enabled = false;
-            secciontxt.Location = new Point(554, 211);
+            secciontxt.Location = new Point(134, 306);
             secciontxt.Name = "secciontxt";
-            secciontxt.Size = new Size(189, 23);
+            secciontxt.Size = new Size(237, 23);
             secciontxt.TabIndex = 13;
             // 
             // categoriabox
@@ -186,7 +181,7 @@
             categoriabox.DropDownStyle = ComboBoxStyle.DropDownList;
             categoriabox.Enabled = false;
             categoriabox.FormattingEnabled = true;
-            categoriabox.Location = new Point(134, 154);
+            categoriabox.Location = new Point(134, 120);
             categoriabox.Name = "categoriabox";
             categoriabox.Size = new Size(237, 23);
             categoriabox.TabIndex = 9;
@@ -198,9 +193,9 @@
             idsuplidortxt.DropDownStyle = ComboBoxStyle.DropDownList;
             idsuplidortxt.Enabled = false;
             idsuplidortxt.FormattingEnabled = true;
-            idsuplidortxt.Location = new Point(554, 154);
+            idsuplidortxt.Location = new Point(134, 258);
             idsuplidortxt.Name = "idsuplidortxt";
-            idsuplidortxt.Size = new Size(189, 23);
+            idsuplidortxt.Size = new Size(237, 23);
             idsuplidortxt.TabIndex = 12;
             idsuplidortxt.SelectedIndexChanged += idsuplidortxt_SelectedIndexChanged;
             // 
@@ -214,42 +209,13 @@
             entradadeproductosLB.TabIndex = 14;
             entradadeproductosLB.Text = "ENTRADA DE PRODUCTOS";
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.cajasparafotoentradaproducto;
-            pictureBox1.Location = new Point(239, 256);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(372, 140);
-            pictureBox1.TabIndex = 15;
-            pictureBox1.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.Image = Properties.Resources.foto_de_cajitas_48_pix;
-            pictureBox4.Location = new Point(12, 389);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(54, 49);
-            pictureBox4.TabIndex = 18;
-            pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            pictureBox5.Image = Properties.Resources.foto_de_cajitas_48_pix1;
-            pictureBox5.Location = new Point(734, 389);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(54, 49);
-            pictureBox5.TabIndex = 19;
-            pictureBox5.TabStop = false;
-            // 
             // agrproducto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(800, 450);
-            Controls.Add(pictureBox5);
-            Controls.Add(pictureBox4);
-            Controls.Add(pictureBox1);
             Controls.Add(entradadeproductosLB);
             Controls.Add(idsuplidortxt);
             Controls.Add(categoriabox);
@@ -273,9 +239,6 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Entrada de Producto";
             Load += agrproducto_Load_1;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -297,8 +260,5 @@
         private ComboBox categoriabox;
         private ComboBox idsuplidortxt;
         private Label entradadeproductosLB;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox5;
     }
 }

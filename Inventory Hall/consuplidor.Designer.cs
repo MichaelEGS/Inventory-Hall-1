@@ -40,6 +40,7 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = SystemColors.ButtonFace;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(31, 60);
             dataGridView1.Name = "dataGridView1";
@@ -50,32 +51,40 @@
             // 
             // buscarbtn
             // 
+            buscarbtn.BackColor = Color.FromArgb(0, 192, 0);
             buscarbtn.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            buscarbtn.Location = new Point(495, 431);
+            buscarbtn.Image = Properties.Resources.seachx3;
+            buscarbtn.ImageAlign = ContentAlignment.MiddleLeft;
+            buscarbtn.Location = new Point(407, 415);
             buscarbtn.Name = "buscarbtn";
-            buscarbtn.Size = new Size(81, 33);
+            buscarbtn.Size = new Size(91, 46);
             buscarbtn.TabIndex = 1;
             buscarbtn.Text = "Buscar";
-            buscarbtn.UseVisualStyleBackColor = true;
+            buscarbtn.TextAlign = ContentAlignment.MiddleRight;
+            buscarbtn.UseVisualStyleBackColor = false;
             buscarbtn.Click += buscarbtn_Click;
             // 
             // refreshbtn
             // 
+            refreshbtn.BackColor = Color.Blue;
             refreshbtn.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            refreshbtn.Location = new Point(609, 431);
+            refreshbtn.Image = Properties.Resources.refresh_icon;
+            refreshbtn.ImageAlign = ContentAlignment.MiddleLeft;
+            refreshbtn.Location = new Point(549, 415);
             refreshbtn.Name = "refreshbtn";
-            refreshbtn.Size = new Size(82, 33);
+            refreshbtn.Size = new Size(94, 46);
             refreshbtn.TabIndex = 2;
             refreshbtn.Text = "Refresh";
-            refreshbtn.UseVisualStyleBackColor = true;
+            refreshbtn.TextAlign = ContentAlignment.MiddleRight;
+            refreshbtn.UseVisualStyleBackColor = false;
             refreshbtn.Click += refreshbtn_Click;
             // 
             // buscartxt
             // 
-            buscartxt.Location = new Point(269, 423);
+            buscartxt.Location = new Point(697, 415);
             buscartxt.Multiline = true;
             buscartxt.Name = "buscartxt";
-            buscartxt.Size = new Size(166, 38);
+            buscartxt.Size = new Size(166, 46);
             buscartxt.TabIndex = 3;
             buscartxt.TextChanged += buscartxt_TextChanged;
             // 
@@ -93,11 +102,12 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(269, 403);
+            label2.Location = new Point(720, 386);
             label2.Name = "label2";
             label2.Size = new Size(106, 17);
             label2.TabIndex = 5;
             label2.Text = "Inserte Suplidor";
+            label2.Click += label2_Click;
             // 
             // consuplidor
             // 

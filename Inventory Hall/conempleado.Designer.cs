@@ -42,6 +42,7 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = SystemColors.ButtonFace;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = SystemColors.Control;
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -69,33 +70,41 @@
             // buscartxt
             // 
             buscartxt.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            buscartxt.Location = new Point(292, 413);
+            buscartxt.Location = new Point(698, 398);
             buscartxt.Multiline = true;
             buscartxt.Name = "buscartxt";
-            buscartxt.Size = new Size(140, 32);
+            buscartxt.Size = new Size(140, 45);
             buscartxt.TabIndex = 1;
             buscartxt.TextChanged += buscartxt_TextChanged;
             // 
             // buscarbtn
             // 
+            buscarbtn.BackColor = Color.FromArgb(0, 192, 0);
             buscarbtn.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            buscarbtn.Location = new Point(453, 410);
+            buscarbtn.Image = Properties.Resources.seachx3;
+            buscarbtn.ImageAlign = ContentAlignment.MiddleLeft;
+            buscarbtn.Location = new Point(423, 398);
             buscarbtn.Name = "buscarbtn";
-            buscarbtn.Size = new Size(83, 35);
+            buscarbtn.Size = new Size(90, 44);
             buscarbtn.TabIndex = 2;
             buscarbtn.Text = "Buscar";
-            buscarbtn.UseVisualStyleBackColor = true;
+            buscarbtn.TextAlign = ContentAlignment.MiddleRight;
+            buscarbtn.UseVisualStyleBackColor = false;
             buscarbtn.Click += buscarbtn_Click;
             // 
             // refreshbtn
             // 
+            refreshbtn.BackColor = Color.Blue;
             refreshbtn.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            refreshbtn.Location = new Point(584, 410);
+            refreshbtn.Image = Properties.Resources.refresh_icon;
+            refreshbtn.ImageAlign = ContentAlignment.MiddleLeft;
+            refreshbtn.Location = new Point(546, 398);
             refreshbtn.Name = "refreshbtn";
-            refreshbtn.Size = new Size(83, 35);
+            refreshbtn.Size = new Size(94, 44);
             refreshbtn.TabIndex = 3;
             refreshbtn.Text = "Refresh";
-            refreshbtn.UseVisualStyleBackColor = true;
+            refreshbtn.TextAlign = ContentAlignment.MiddleRight;
+            refreshbtn.UseVisualStyleBackColor = false;
             refreshbtn.Click += refreshbtn_Click;
             // 
             // label1
@@ -112,7 +121,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(292, 384);
+            label2.Location = new Point(711, 378);
             label2.Name = "label2";
             label2.Size = new Size(115, 17);
             label2.TabIndex = 5;

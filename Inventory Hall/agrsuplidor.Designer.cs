@@ -44,10 +44,6 @@
             telefonotxt = new MaskedTextBox();
             rnctxt = new MaskedTextBox();
             entradadesuplidorLB = new Label();
-            pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // nombreLB
@@ -56,9 +52,9 @@
             nombreLB.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             nombreLB.Location = new Point(14, 127);
             nombreLB.Name = "nombreLB";
-            nombreLB.Size = new Size(58, 17);
+            nombreLB.Size = new Size(62, 17);
             nombreLB.TabIndex = 0;
-            nombreLB.Text = "Nombre";
+            nombreLB.Text = "Nombre:";
             // 
             // rncLB
             // 
@@ -66,9 +62,9 @@
             rncLB.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             rncLB.Location = new Point(38, 171);
             rncLB.Name = "rncLB";
-            rncLB.Size = new Size(34, 17);
+            rncLB.Size = new Size(38, 17);
             rncLB.TabIndex = 1;
-            rncLB.Text = "RNC";
+            rncLB.Text = "RNC:";
             // 
             // direccionLB
             // 
@@ -76,9 +72,9 @@
             direccionLB.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             direccionLB.Location = new Point(6, 229);
             direccionLB.Name = "direccionLB";
-            direccionLB.Size = new Size(66, 17);
+            direccionLB.Size = new Size(70, 17);
             direccionLB.TabIndex = 2;
-            direccionLB.Text = "Direccion";
+            direccionLB.Text = "Direccion:";
             // 
             // emailLB
             // 
@@ -86,9 +82,9 @@
             emailLB.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             emailLB.Location = new Point(414, 122);
             emailLB.Name = "emailLB";
-            emailLB.Size = new Size(42, 17);
+            emailLB.Size = new Size(46, 17);
             emailLB.TabIndex = 3;
-            emailLB.Text = "Email";
+            emailLB.Text = "Email:";
             // 
             // telefonoLB
             // 
@@ -96,9 +92,9 @@
             telefonoLB.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             telefonoLB.Location = new Point(394, 174);
             telefonoLB.Name = "telefonoLB";
-            telefonoLB.Size = new Size(62, 17);
+            telefonoLB.Size = new Size(66, 17);
             telefonoLB.TabIndex = 4;
-            telefonoLB.Text = "Telefono";
+            telefonoLB.Text = "Telefono:";
             // 
             // descripcionLB
             // 
@@ -106,9 +102,9 @@
             descripcionLB.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             descripcionLB.Location = new Point(376, 223);
             descripcionLB.Name = "descripcionLB";
-            descripcionLB.Size = new Size(80, 17);
+            descripcionLB.Size = new Size(84, 17);
             descripcionLB.TabIndex = 5;
-            descripcionLB.Text = "Descripcion";
+            descripcionLB.Text = "Descripcion:";
             // 
             // nombretxt
             // 
@@ -148,11 +144,12 @@
             // 
             // insertarbtn
             // 
-            insertarbtn.BackColor = SystemColors.ActiveCaption;
+            insertarbtn.BackColor = Color.Blue;
             insertarbtn.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            insertarbtn.ForeColor = SystemColors.ButtonFace;
             insertarbtn.Location = new Point(271, 384);
             insertarbtn.Name = "insertarbtn";
-            insertarbtn.Size = new Size(75, 23);
+            insertarbtn.Size = new Size(75, 34);
             insertarbtn.TabIndex = 12;
             insertarbtn.Text = "Insertar";
             insertarbtn.UseVisualStyleBackColor = false;
@@ -160,11 +157,12 @@
             // 
             // guardarbtn
             // 
-            guardarbtn.BackColor = SystemColors.ActiveCaption;
+            guardarbtn.BackColor = Color.FromArgb(0, 192, 0);
             guardarbtn.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            guardarbtn.ForeColor = SystemColors.ButtonFace;
             guardarbtn.Location = new Point(429, 384);
             guardarbtn.Name = "guardarbtn";
-            guardarbtn.Size = new Size(75, 23);
+            guardarbtn.Size = new Size(75, 34);
             guardarbtn.TabIndex = 13;
             guardarbtn.Text = "Guardar";
             guardarbtn.UseVisualStyleBackColor = false;
@@ -195,38 +193,21 @@
             // entradadesuplidorLB
             // 
             entradadesuplidorLB.AutoSize = true;
+            entradadesuplidorLB.BackColor = SystemColors.ActiveCaption;
             entradadesuplidorLB.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            entradadesuplidorLB.ForeColor = SystemColors.ActiveCaptionText;
             entradadesuplidorLB.Location = new Point(310, 44);
             entradadesuplidorLB.Name = "entradadesuplidorLB";
             entradadesuplidorLB.Size = new Size(192, 21);
             entradadesuplidorLB.TabIndex = 14;
             entradadesuplidorLB.Text = "ENTRADA DE SUPLIDOR";
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources._9044388_enterprise_icon;
-            pictureBox1.Location = new Point(260, 15);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(53, 50);
-            pictureBox1.TabIndex = 15;
-            pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = Properties.Resources._9043673_3d_mpr_toggle_icon;
-            pictureBox2.Location = new Point(364, 416);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(51, 50);
-            pictureBox2.TabIndex = 16;
-            pictureBox2.TabStop = false;
-            // 
             // agrsuplidor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(810, 478);
-            Controls.Add(pictureBox2);
-            Controls.Add(pictureBox1);
             Controls.Add(entradadesuplidorLB);
             Controls.Add(rnctxt);
             Controls.Add(telefonotxt);
@@ -249,8 +230,6 @@
             Name = "agrsuplidor";
             Text = "Entrada de Suplidor ";
             Load += agrsuplidor_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -272,7 +251,5 @@
         private MaskedTextBox telefonotxt;
         private MaskedTextBox rnctxt;
         private Label entradadesuplidorLB;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
     }
 }

@@ -40,7 +40,7 @@
             // 
             // dataGridView1
             // 
-            dataGridView1.BackgroundColor = SystemColors.ActiveBorder;
+            dataGridView1.BackgroundColor = SystemColors.ButtonFace;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.GridColor = SystemColors.WindowText;
             dataGridView1.Location = new Point(21, 64);
@@ -61,13 +61,14 @@
             // 
             // buttonseccionupdate
             // 
+            buttonseccionupdate.BackColor = Color.FromArgb(0, 192, 0);
             buttonseccionupdate.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonseccionupdate.Location = new Point(459, 389);
+            buttonseccionupdate.Location = new Point(456, 383);
             buttonseccionupdate.Name = "buttonseccionupdate";
             buttonseccionupdate.Size = new Size(98, 35);
             buttonseccionupdate.TabIndex = 2;
             buttonseccionupdate.Text = "Actualizar";
-            buttonseccionupdate.UseVisualStyleBackColor = true;
+            buttonseccionupdate.UseVisualStyleBackColor = false;
             buttonseccionupdate.Click += buttonseccionupdate_Click;
             // 
             // textBoxNewSeccion
@@ -80,20 +81,20 @@
             // idproductoLB
             // 
             idproductoLB.AutoSize = true;
-            idproductoLB.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            idproductoLB.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             idproductoLB.Location = new Point(110, 362);
             idproductoLB.Name = "idproductoLB";
-            idproductoLB.Size = new Size(97, 17);
+            idproductoLB.Size = new Size(117, 21);
             idproductoLB.TabIndex = 4;
             idproductoLB.Text = "ID PRODUCTO";
             // 
             // nuevaseccionLB
             // 
             nuevaseccionLB.AutoSize = true;
-            nuevaseccionLB.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            nuevaseccionLB.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             nuevaseccionLB.Location = new Point(269, 362);
             nuevaseccionLB.Name = "nuevaseccionLB";
-            nuevaseccionLB.Size = new Size(109, 17);
+            nuevaseccionLB.Size = new Size(137, 21);
             nuevaseccionLB.TabIndex = 5;
             nuevaseccionLB.Text = "NUEVA SECCION";
             // 

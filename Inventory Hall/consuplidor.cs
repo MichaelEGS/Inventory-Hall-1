@@ -176,5 +176,10 @@ namespace Inventory_Hall
             // Recargar todos los proveedores
             LoadSuppliers();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
