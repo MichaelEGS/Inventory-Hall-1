@@ -113,5 +113,10 @@ namespace Inventory_Hall
             }
             return unmaskedText;
         }
+
+        private void agrempleado_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

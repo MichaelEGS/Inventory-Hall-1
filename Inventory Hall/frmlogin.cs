@@ -24,7 +24,7 @@ namespace Inventory_Hall
 
         private void loginbtn_Click(object sender, EventArgs e)
         {
-            if (usuariotxt.Text == "steven" && maskedcon.Text == "0785")
+            if (usuariotxt.Text == "michael" && maskedcon.Text == "123456")
             {
                 DialogResult = DialogResult.OK; // Set the DialogResult to OK
                 Close(); // Close the login form

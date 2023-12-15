@@ -62,7 +62,7 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.BackColor = Color.LightSteelBlue;
+            menuStrip1.BackColor = Color.WhiteSmoke;
             menuStrip1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             menuStrip1.Items.AddRange(new ToolStripItem[] { eNTRADAToolStripMenuItem, pROCESOToolStripMenuItem, cONSULTAToolStripMenuItem, sISTEMAToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
@@ -81,21 +81,21 @@
             // pRODUCTOToolStripMenuItem
             // 
             pRODUCTOToolStripMenuItem.Name = "pRODUCTOToolStripMenuItem";
-            pRODUCTOToolStripMenuItem.Size = new Size(180, 26);
+            pRODUCTOToolStripMenuItem.Size = new Size(166, 26);
             pRODUCTOToolStripMenuItem.Text = "PRODUCTO ";
             pRODUCTOToolStripMenuItem.Click += pRODUCTOToolStripMenuItem_Click;
             // 
             // eMPLEADOToolStripMenuItem
             // 
             eMPLEADOToolStripMenuItem.Name = "eMPLEADOToolStripMenuItem";
-            eMPLEADOToolStripMenuItem.Size = new Size(180, 26);
+            eMPLEADOToolStripMenuItem.Size = new Size(166, 26);
             eMPLEADOToolStripMenuItem.Text = "EMPLEADO";
             eMPLEADOToolStripMenuItem.Click += eMPLEADOToolStripMenuItem_Click;
             // 
             // sUPLIDORToolStripMenuItem
             // 
             sUPLIDORToolStripMenuItem.Name = "sUPLIDORToolStripMenuItem";
-            sUPLIDORToolStripMenuItem.Size = new Size(180, 26);
+            sUPLIDORToolStripMenuItem.Size = new Size(166, 26);
             sUPLIDORToolStripMenuItem.Text = "SUPLIDOR";
             sUPLIDORToolStripMenuItem.Click += sUPLIDORToolStripMenuItem_Click;
             // 
@@ -160,8 +160,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.LightBlue;
-            BackgroundImage = Properties.Resources.foto_para_imagen_de_fono_del_inventory_hall_;
+            BackColor = Color.MediumTurquoise;
+            BackgroundImage = Properties.Resources.foto_de_fondo_principal;
             ClientSize = new Size(935, 615);
             ControlBox = false;
             Controls.Add(btncerrar);

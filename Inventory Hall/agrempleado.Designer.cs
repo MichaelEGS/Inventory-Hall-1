@@ -48,12 +48,6 @@
             maskedcel = new MaskedTextBox();
             guardarbtn = new Button();
             entreadoempleadoLB = new Label();
-            pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            pictureBox3 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // nombretxt
@@ -68,11 +62,12 @@
             // 
             // nuevobtn
             // 
-            nuevobtn.BackColor = SystemColors.ActiveCaption;
+            nuevobtn.BackColor = Color.FromArgb(0, 0, 192);
             nuevobtn.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            nuevobtn.ForeColor = SystemColors.ButtonHighlight;
             nuevobtn.Location = new Point(273, 403);
             nuevobtn.Name = "nuevobtn";
-            nuevobtn.Size = new Size(85, 23);
+            nuevobtn.Size = new Size(85, 35);
             nuevobtn.TabIndex = 18;
             nuevobtn.Text = "Nuevo";
             nuevobtn.UseVisualStyleBackColor = false;
@@ -84,9 +79,9 @@
             nombreLB.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             nombreLB.Location = new Point(66, 146);
             nombreLB.Name = "nombreLB";
-            nombreLB.Size = new Size(58, 17);
+            nombreLB.Size = new Size(62, 17);
             nombreLB.TabIndex = 2;
-            nombreLB.Text = "Nombre";
+            nombreLB.Text = "Nombre:";
             // 
             // apellidoLB
             // 
@@ -94,9 +89,9 @@
             apellidoLB.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             apellidoLB.Location = new Point(66, 196);
             apellidoLB.Name = "apellidoLB";
-            apellidoLB.Size = new Size(60, 17);
+            apellidoLB.Size = new Size(64, 17);
             apellidoLB.TabIndex = 3;
-            apellidoLB.Text = "Apellido";
+            apellidoLB.Text = "Apellido:";
             // 
             // direccionLB
             // 
@@ -104,9 +99,9 @@
             direccionLB.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             direccionLB.Location = new Point(66, 240);
             direccionLB.Name = "direccionLB";
-            direccionLB.Size = new Size(66, 17);
+            direccionLB.Size = new Size(70, 17);
             direccionLB.TabIndex = 4;
-            direccionLB.Text = "Direccion";
+            direccionLB.Text = "Direccion:";
             // 
             // dniLB
             // 
@@ -114,9 +109,9 @@
             dniLB.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             dniLB.Location = new Point(66, 289);
             dniLB.Name = "dniLB";
-            dniLB.Size = new Size(32, 17);
+            dniLB.Size = new Size(36, 17);
             dniLB.TabIndex = 5;
-            dniLB.Text = "DNI";
+            dniLB.Text = "DNI:";
             // 
             // emailLB
             // 
@@ -124,9 +119,9 @@
             emailLB.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             emailLB.Location = new Point(381, 146);
             emailLB.Name = "emailLB";
-            emailLB.Size = new Size(42, 17);
+            emailLB.Size = new Size(46, 17);
             emailLB.TabIndex = 6;
-            emailLB.Text = "Email";
+            emailLB.Text = "Email:";
             // 
             // telefonoLB
             // 
@@ -134,9 +129,9 @@
             telefonoLB.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             telefonoLB.Location = new Point(381, 191);
             telefonoLB.Name = "telefonoLB";
-            telefonoLB.Size = new Size(62, 17);
+            telefonoLB.Size = new Size(66, 17);
             telefonoLB.TabIndex = 7;
-            telefonoLB.Text = "Telefono";
+            telefonoLB.Text = "Telefono:";
             // 
             // celularLB
             // 
@@ -144,9 +139,9 @@
             celularLB.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             celularLB.Location = new Point(381, 242);
             celularLB.Name = "celularLB";
-            celularLB.Size = new Size(51, 17);
+            celularLB.Size = new Size(56, 17);
             celularLB.TabIndex = 8;
-            celularLB.Text = "Celular";
+            celularLB.Text = "Celular:";
             // 
             // cargoLB
             // 
@@ -154,9 +149,9 @@
             cargoLB.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             cargoLB.Location = new Point(381, 287);
             cargoLB.Name = "cargoLB";
-            cargoLB.Size = new Size(44, 17);
+            cargoLB.Size = new Size(48, 17);
             cargoLB.TabIndex = 9;
-            cargoLB.Text = "Cargo";
+            cargoLB.Text = "Cargo:";
             // 
             // apellidotxt
             // 
@@ -226,11 +221,12 @@
             // 
             // guardarbtn
             // 
-            guardarbtn.BackColor = SystemColors.ActiveCaption;
+            guardarbtn.BackColor = Color.FromArgb(0, 192, 0);
             guardarbtn.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            guardarbtn.ForeColor = SystemColors.ButtonHighlight;
             guardarbtn.Location = new Point(404, 403);
             guardarbtn.Name = "guardarbtn";
-            guardarbtn.Size = new Size(78, 23);
+            guardarbtn.Size = new Size(78, 35);
             guardarbtn.TabIndex = 19;
             guardarbtn.Text = "Guardar";
             guardarbtn.UseVisualStyleBackColor = false;
@@ -246,41 +242,13 @@
             entreadoempleadoLB.TabIndex = 20;
             entreadoempleadoLB.Text = "ENTRADA DE EMPLEADOS";
             // 
-            // pictureBox1
-            // 
-            pictureBox1.BackgroundImage = Properties.Resources.foto_de_agrempleado_48pix;
-            pictureBox1.Location = new Point(26, 382);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(48, 44);
-            pictureBox1.TabIndex = 21;
-            pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.BackgroundImage = Properties.Resources.foto_de_agrempleado_48pix1;
-            pictureBox2.Location = new Point(740, 382);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(48, 44);
-            pictureBox2.TabIndex = 22;
-            pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.BackgroundImage = Properties.Resources.foto_de_agrempleado2_48pix;
-            pictureBox3.Location = new Point(208, 41);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(46, 52);
-            pictureBox3.TabIndex = 23;
-            pictureBox3.TabStop = false;
-            // 
             // agrempleado
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
+            BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(800, 450);
-            Controls.Add(pictureBox3);
-            Controls.Add(pictureBox2);
-            Controls.Add(pictureBox1);
             Controls.Add(entreadoempleadoLB);
             Controls.Add(guardarbtn);
             Controls.Add(maskedcel);
@@ -300,14 +268,14 @@
             Controls.Add(nombreLB);
             Controls.Add(nuevobtn);
             Controls.Add(nombretxt);
+            Cursor = Cursors.No;
+            DoubleBuffered = true;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "agrempleado";
             Text = "Entrada de Empleado";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            Load += agrempleado_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -333,8 +301,5 @@
         private MaskedTextBox maskedcel;
         private Button guardarbtn;
         private Label entreadoempleadoLB;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox3;
     }
 }

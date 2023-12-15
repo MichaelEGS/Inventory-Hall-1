@@ -40,6 +40,7 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = SystemColors.Menu;
             dataGridView1.BorderStyle = BorderStyle.Fixed3D;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(21, 53);
@@ -52,7 +53,8 @@
             // txtID
             // 
             txtID.Anchor = AnchorStyles.Bottom;
-            txtID.Location = new Point(126, 393);
+            txtID.BackColor = SystemColors.Menu;
+            txtID.Location = new Point(526, 378);
             txtID.Multiline = true;
             txtID.Name = "txtID";
             txtID.Size = new Size(140, 45);
@@ -62,35 +64,47 @@
             // 
             buscarbtn.Anchor = AnchorStyles.Bottom;
             buscarbtn.AutoSize = true;
+            buscarbtn.BackColor = Color.FromArgb(0, 192, 0);
+            buscarbtn.BackgroundImageLayout = ImageLayout.None;
             buscarbtn.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            buscarbtn.Location = new Point(314, 378);
+            buscarbtn.ForeColor = SystemColors.ActiveCaptionText;
+            buscarbtn.Image = Properties.Resources.seachx3;
+            buscarbtn.ImageAlign = ContentAlignment.MiddleLeft;
+            buscarbtn.Location = new Point(278, 375);
             buscarbtn.Name = "buscarbtn";
-            buscarbtn.Size = new Size(100, 48);
+            buscarbtn.Size = new Size(85, 48);
             buscarbtn.TabIndex = 2;
             buscarbtn.Text = "Buscar";
-            buscarbtn.UseVisualStyleBackColor = true;
+            buscarbtn.TextAlign = ContentAlignment.MiddleRight;
+            buscarbtn.UseVisualStyleBackColor = false;
             buscarbtn.Click += buscarbtn_Click;
             // 
             // refreshbtn
             // 
             refreshbtn.Anchor = AnchorStyles.Bottom;
+            refreshbtn.BackColor = SystemColors.MenuHighlight;
+            refreshbtn.BackgroundImageLayout = ImageLayout.None;
             refreshbtn.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            refreshbtn.Location = new Point(453, 378);
+            refreshbtn.ForeColor = SystemColors.ActiveCaptionText;
+            refreshbtn.Image = Properties.Resources.refresh_icon;
+            refreshbtn.ImageAlign = ContentAlignment.MiddleLeft;
+            refreshbtn.Location = new Point(397, 375);
             refreshbtn.Name = "refreshbtn";
-            refreshbtn.Size = new Size(110, 48);
+            refreshbtn.Size = new Size(93, 48);
             refreshbtn.TabIndex = 3;
             refreshbtn.Text = "Refresh";
-            refreshbtn.UseVisualStyleBackColor = true;
+            refreshbtn.TextAlign = ContentAlignment.MiddleRight;
+            refreshbtn.UseVisualStyleBackColor = false;
             refreshbtn.Click += refreshbtn_Click;
             // 
             // buscarLB
             // 
             buscarLB.Anchor = AnchorStyles.Bottom;
             buscarLB.AutoSize = true;
-            buscarLB.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            buscarLB.Location = new Point(126, 363);
+            buscarLB.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            buscarLB.Location = new Point(526, 360);
             buscarLB.Name = "buscarLB";
-            buscarLB.Size = new Size(140, 15);
+            buscarLB.Size = new Size(159, 15);
             buscarLB.TabIndex = 4;
             buscarLB.Text = "Inserte ID del producto.";
             // 

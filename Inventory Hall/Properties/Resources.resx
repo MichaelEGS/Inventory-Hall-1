@@ -121,6 +121,9 @@
   <data name="foto de cajitas 48 pix" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\foto de cajitas 48 pix.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icono de buscar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icono de buscar.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="entrada suplidor ico" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\entrada suplidor ico.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -130,17 +133,32 @@
   <data name="9044388_enterprise_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\9044388_enterprise_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="foto de entrada producto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\foto de entrada producto;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="foto para imagen de fono del inventory hall " type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\foto para imagen de fono del inventory hall .jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="refresh icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\refresh icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="searchx2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\searchx2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="fotodeinventoryhall" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fotodeinventoryhall.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="9043673_3d_mpr_toggle_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\9043673_3d_mpr_toggle_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="foto de agrempleado2 48pix" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\foto de agrempleado2 48pix.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cajasparafotoentradaproducto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cajasparafotoentradaproducto.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="foto de agrempleado 48pix" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\foto de agrempleado 48pix.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="foto para poner en la esquinita" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\foto para poner en la esquinita.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,13 +169,16 @@
   <data name="foto de cajitas 48 pix1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\foto de cajitas 48 pix1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="foto de agrempleado 48pix" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\foto de agrempleado 48pix.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="seachx3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\seachx3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="foto de entrada producto" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\foto de entrada producto;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="9043673_3d_mpr_toggle_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\9043673_3d_mpr_toggle_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="foto de fondo principal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\foto de fondo principal.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="entrada de empleado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\entrada de empleado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
