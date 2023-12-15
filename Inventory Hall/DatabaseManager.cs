@@ -14,8 +14,7 @@ namespace Inventory_Hall
         private SqlConnection connection;
         public DatabaseManager()
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["InventoryHall"].ConnectionString;
-            connection = new SqlConnection(connectionString);
+            string connectionString = ConfigurationManager.ConnectionStrings["InventoryHall"].ConnectionString + ";Encrypt=True;TrustServerCertificate=True;"; connection = new SqlConnection(connectionString);
 
         }
 
