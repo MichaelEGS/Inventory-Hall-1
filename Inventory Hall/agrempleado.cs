@@ -12,15 +12,15 @@ namespace Inventory_Hall
 {
     public partial class agrempleado : Form
     {
-        private DatabaseManager databaseManager;
+        private DatabaseManager databaseManager; // Instancia de la clase DatabaseManager para la gestión de la base de datos
 
         public agrempleado()
         {
             InitializeComponent();
-            databaseManager = new DatabaseManager();
+            databaseManager = new DatabaseManager(); // Inicializar el gestor de base de datos
         }
-
-        private void nuevobtn_Click(object sender, EventArgs e)
+        // Manejador del evento de clic en el botón "Nuevo"
+        private void nuevobtn_Click(object sender, EventArgs e) 
         {
             nombretxt.Enabled = true;
             apellidotxt.Enabled = true;
@@ -45,45 +45,45 @@ namespace Inventory_Hall
         {
 
         }
-
+        // Manejador del evento de clic en el botón "Guardar"
         private void guardarbtn_Click(object sender, EventArgs e)
         {
             try
             {
-                // Check if any of the required fields is empty
+                // Verificar si alguno de los campos requeridos está vacío
                 if (string.IsNullOrWhiteSpace(nombretxt.Text) || string.IsNullOrWhiteSpace(apellidotxt.Text) ||
                     string.IsNullOrWhiteSpace(direcciontxt.Text) || string.IsNullOrWhiteSpace(GetUnmaskedText(maskeddni)) ||
                     string.IsNullOrWhiteSpace(emailtxt.Text) || string.IsNullOrWhiteSpace(GetUnmaskedText(maskedtel)) ||
                     string.IsNullOrWhiteSpace(GetUnmaskedText(maskedcel)) || string.IsNullOrWhiteSpace(cargotxt.Text))
                 {
                     MessageBox.Show("Por favor llenar todos los campos.");
-                    return; // Exit the method without proceeding to database insertion
+                    return; // Salir del método sin continuar con la inserción en la base de datos
                 }
-
+                // Consulta SQL para insertar datos en la tabla 'empleado'
                 string insertQuery = "INSERT INTO empleado (nombre, apellido, direccion, dni, email, telefono, celular, cargo) " +
                    "VALUES (@nombre, @apellido, @direccion, @dni, @email, @telefono, @celular, @cargo)";
 
                 using (SqlCommand command = new SqlCommand(insertQuery, databaseManager.GetConnection()))
                 {
-                    // Add parameters using AddWithValue
+                    // Agregar parámetros utilizando AddWithValue
                     command.Parameters.AddWithValue("@nombre", nombretxt.Text);
                     command.Parameters.AddWithValue("@apellido", apellidotxt.Text);
                     command.Parameters.AddWithValue("@direccion", direcciontxt.Text);
 
-                    string dni = maskeddni.Text.Replace("-", " "); // Remove spaces or any other formatting
+                    string dni = maskeddni.Text.Replace("-", " "); // Eliminar espacios u otros formatos
                     command.Parameters.AddWithValue("@dni", dni);
 
                     command.Parameters.AddWithValue("@email", emailtxt.Text);
 
-                    string phoneNumber = maskedtel.Text.Replace("-", ""); // Remove hyphens or any other formatting
+                    string phoneNumber = maskedtel.Text.Replace("-", ""); // Eliminar guiones u otros formatos
                     command.Parameters.AddWithValue("@telefono", phoneNumber);
 
-                    string cellphoneNumber = maskedcel.Text.Replace("-", ""); // Remove hyphens or any other formatting
+                    string cellphoneNumber = maskedcel.Text.Replace("-", ""); // Eliminar guiones u otros formatos
                     command.Parameters.AddWithValue("@celular", cellphoneNumber);
 
                     command.Parameters.AddWithValue("@cargo", cargotxt.Text);
 
-                    // Execute the SQL command
+                    // Ejecutar el comando SQL
                     command.ExecuteNonQuery();
                 }
 
@@ -91,7 +91,7 @@ namespace Inventory_Hall
 
                 nombretxt.Clear();
                 apellidotxt.Clear();
-                direcciontxt.Clear();
+                direcciontxt.Clear();           // Limpiar los campos después de la inserción exitosa
                 maskeddni.Clear();
                 emailtxt.Clear();
                 maskedtel.Clear();
@@ -103,7 +103,7 @@ namespace Inventory_Hall
                 MessageBox.Show("ERROR HAS INSERTADO UN DATO MAL: " + ex.Message);
             }
         }
-
+        // Método para obtener el texto sin formato de un MaskedTextBox
         private string GetUnmaskedText(MaskedTextBox maskedTextBox)
         {
             string unmaskedText = maskedTextBox.Text;

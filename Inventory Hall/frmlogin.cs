@@ -10,29 +10,30 @@ using System.Windows.Forms;
 
 namespace Inventory_Hall
 {
-    public partial class frmlogin : Form
+    public partial class frmlogin : Form // Clase del formulario de inicio de sesión (login)
     {
         public frmlogin()
         {
             InitializeComponent();
         }
 
-        private void cancelarbtn_Click(object sender, EventArgs e)
+        private void cancelarbtn_Click(object sender, EventArgs e) // Manejador del evento de clic en el botón de cancelar
         {
             this.Dispose();
         }
 
-        private void loginbtn_Click(object sender, EventArgs e)
+        private void loginbtn_Click(object sender, EventArgs e) // Manejador del evento de clic en el botón de inicio de sesión
         {
+            // Verificar si el nombre de usuario y la contraseña son correc
             if (usuariotxt.Text == "michael" && maskedcon.Text == "123456")
             {
-                DialogResult = DialogResult.OK; // Set the DialogResult to OK
-                Close(); // Close the login form
+                DialogResult = DialogResult.OK; // Establecer DialogResult en OK
+                Close(); // cierre del formulario de inicio de sesion
 
             }
-
+            
             else
-            {
+            {// Mostrar mensajes de error según la situación
                 if (usuariotxt.Text != "michael" && maskedcon.Text != "123456")
                 {
                     MessageBox.Show("El usuario y la contraseña son incorrectas");

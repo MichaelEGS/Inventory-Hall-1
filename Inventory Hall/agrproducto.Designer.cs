@@ -52,9 +52,9 @@
             LBnombre.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             LBnombre.Location = new Point(46, 81);
             LBnombre.Name = "LBnombre";
-            LBnombre.Size = new Size(58, 17);
+            LBnombre.Size = new Size(62, 17);
             LBnombre.TabIndex = 0;
-            LBnombre.Text = "Nombre";
+            LBnombre.Text = "Nombre:";
             // 
             // LBcategoria
             // 
@@ -62,9 +62,9 @@
             LBcategoria.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             LBcategoria.Location = new Point(46, 120);
             LBcategoria.Name = "LBcategoria";
-            LBcategoria.Size = new Size(67, 17);
+            LBcategoria.Size = new Size(71, 17);
             LBcategoria.TabIndex = 1;
-            LBcategoria.Text = "Categoria";
+            LBcategoria.Text = "Categoria:";
             // 
             // LBdescripcion
             // 
@@ -72,9 +72,9 @@
             LBdescripcion.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             LBdescripcion.Location = new Point(46, 169);
             LBdescripcion.Name = "LBdescripcion";
-            LBdescripcion.Size = new Size(80, 17);
+            LBdescripcion.Size = new Size(84, 17);
             LBdescripcion.TabIndex = 2;
-            LBdescripcion.Text = "Descripcion";
+            LBdescripcion.Text = "Descripcion:";
             // 
             // LBstock
             // 
@@ -82,9 +82,9 @@
             LBstock.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             LBstock.Location = new Point(63, 211);
             LBstock.Name = "LBstock";
-            LBstock.Size = new Size(41, 17);
+            LBstock.Size = new Size(46, 17);
             LBstock.TabIndex = 3;
-            LBstock.Text = "Stock";
+            LBstock.Text = "Stock:";
             // 
             // LBidsuplidor
             // 
@@ -92,9 +92,9 @@
             LBidsuplidor.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             LBidsuplidor.Location = new Point(48, 258);
             LBidsuplidor.Name = "LBidsuplidor";
-            LBidsuplidor.Size = new Size(78, 17);
+            LBidsuplidor.Size = new Size(83, 17);
             LBidsuplidor.TabIndex = 4;
-            LBidsuplidor.Text = "ID Suplidor";
+            LBidsuplidor.Text = "ID Suplidor:";
             // 
             // LBseccion
             // 
@@ -102,9 +102,9 @@
             LBseccion.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             LBseccion.Location = new Point(59, 306);
             LBseccion.Name = "LBseccion";
-            LBseccion.Size = new Size(54, 17);
+            LBseccion.Size = new Size(58, 17);
             LBseccion.TabIndex = 5;
-            LBseccion.Text = "Seccion";
+            LBseccion.Text = "Seccion:";
             // 
             // insertarbtn
             // 

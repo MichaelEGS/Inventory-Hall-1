@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,21 +20,23 @@ namespace Inventory_Hall
         {
             InitializeComponent();
 
-            // the database manager here is private bc we are only calling it in this form , meaning the data entered here stays here in this specific sqlconnection
+            // La instancia de DatabaseManager es privada porque solo se usa en este formulario. 
+            // Esto significa que los datos ingresados aquí se mantienen en esta conexión SQL específica.
+
             databaseManager = new DatabaseManager();
 
-            // Populate the ComboBox with data from the "categoria" table when the form loads
+            // Llenar el ComboBox con datos de la tabla "categoria" cuando se carga el formulario
             PopulateCategoriaComboBox();
 
-            // Populate the idsuplidortxt ComboBox with data from the "suplidor" table when the form loads
+            // Llenar el ComboBox de idsuplidortxt con datos de la tabla "suplidor" cuando se carga el formulario
             PopulateSuplidorComboBox();
 
         }
-
+        // Método para llenar el ComboBox de categoría
         private void PopulateCategoriaComboBox()
         {
             // Assuming that comboBox1 is the name of your ComboBox
-            categoriabox.Items.Clear(); // Clear any existing items
+            categoriabox.Items.Clear(); // Limpiar cualquier elemento existente en el ComboBox
 
             string query = "SELECT id, tipo FROM categoria";
 
@@ -45,17 +48,17 @@ namespace Inventory_Hall
                     {
                         string id = reader["id"].ToString();
                         string tipo = reader["tipo"].ToString();
-                        string displayText = $"{id} - {tipo}"; // Combine id and tipo
+                        string displayText = $"{id} - {tipo}"; // Combinar id y tipo
                         categoriabox.Items.Add(displayText);
                     }
                 }
             }
         }
-
+        // Método para llenar el ComboBox de idsuplidortxt
         private void PopulateSuplidorComboBox()
         {
             // Assuming that idsuplidortxt is the name of your ComboBox
-            idsuplidortxt.Items.Clear(); // Clear any existing items
+            idsuplidortxt.Items.Clear(); // Limpiar cualquier elemento existente en el ComboBox
             string query = "SELECT id, nombre FROM suplidor";
             using (SqlCommand command = new SqlCommand(query, databaseManager.GetConnection()))
             {
@@ -76,7 +79,7 @@ namespace Inventory_Hall
         {
             nombretxt.Enabled = true;
             descripciontxt.Enabled = true;
-            stocktxt.Enabled = true;
+            stocktxt.Enabled = true;            // Habilitar la edición de campos y establecer el fondo en blanco
             idsuplidortxt.Enabled = true;
             secciontxt.Enabled = true;
             categoriabox.Enabled = true;
@@ -87,16 +90,16 @@ namespace Inventory_Hall
             idsuplidortxt.BackColor = Color.White;
             secciontxt.BackColor = Color.White;
             categoriabox.BackColor = Color.White;
-            // Execute an Sql command using the DatabaseManager class i created earlier
+            // Ejecutar un comando SQL usando la clase DatabaseManager creada anteriormente
 
-            // Also, populate the ComboBox with "categoria" data when you click the insert button
+            // Además, llenar el ComboBox con datos de "categoria" cuando haces clic en el botón insertar
             PopulateCategoriaComboBox();
 
         }
 
         private void agrproducto_Load(object sender, EventArgs e)
         {
-            // Call the method to populate the ComboBox when the form loads
+            // Llamar al método para llenar el ComboBox cuando el formulario se carga
             PopulateCategoriaComboBox();
             PopulateSuplidorComboBox();
 
@@ -108,7 +111,7 @@ namespace Inventory_Hall
         {
             try
             {
-                // Check if any of the required fields are empty
+                // Verificar si alguno de los campos obligatorios está vacío
                 if (string.IsNullOrWhiteSpace(nombretxt.Text) ||
                     categoriabox.SelectedItem == null ||
                     string.IsNullOrWhiteSpace(descripciontxt.Text) ||
@@ -117,22 +120,22 @@ namespace Inventory_Hall
                     string.IsNullOrWhiteSpace(secciontxt.Text))
                 {
                     MessageBox.Show("Favor completar el formulario. Todos los campos son obligatorios.");
-                    return; // Exit the method if any field is empty
+                    return; // Salir del método si algún campo está vacío
                 }
 
-                // Check if the stock value is numeric
+                // Verificar si el valor de stock es numérico
                 if (!int.TryParse(stocktxt.Text, out _))
                 {
                     MessageBox.Show("Favor introduzca un dato numérico en el campo Stock.");
-                    return; // Exit the method if stock is not numeric
+                    return; // Salir del método si stock no es numérico
                 }
-
+                // Consulta SQL para insertar datos en la tabla 'producto'
                 string insertQuery = "insert into producto (nombre, categoria, descripcion, stock, idsuplidor, seccion) " +
                     "VALUES (@nombre, @categoria, @descripcion, @stock, @idsuplidor, @seccion)";
 
                 using (SqlCommand command = new SqlCommand(insertQuery, databaseManager.GetConnection()))
                 {
-                    // Add parameters using AddWithValue
+                    // Agregar parámetros utilizando AddWithValue
                     command.Parameters.AddWithValue("@nombre", nombretxt.Text);
                     string selectedCategory = categoriabox.SelectedItem.ToString();
                     string[] parts = selectedCategory.Split(new[] { " - " }, StringSplitOptions.None);
@@ -149,18 +152,18 @@ namespace Inventory_Hall
 
                     command.Parameters.AddWithValue("@seccion", secciontxt.Text);
 
-                    // Execute the SQL command
+                    // Ejecutar el comando SQL
                     command.ExecuteNonQuery();
                 }
 
                 MessageBox.Show("Data insertada correctamente.");
 
-                categoriabox.SelectedIndex = -1;
+                categoriabox.SelectedIndex = -1;    // Restablecer los ComboBox a su estado inicial después de la inserción exitosa
                 idsuplidortxt.SelectedIndex = -1;
 
                 nombretxt.Text = "";
                 categoriabox.Text = "";
-                descripciontxt.Text = "";
+                descripciontxt.Text = "";       // Limpiar los campos después de la inserción exitosa
                 stocktxt.Text = "";
                 idsuplidortxt.Text = "";
                 secciontxt.Text = "";
@@ -173,16 +176,16 @@ namespace Inventory_Hall
 
 
 
-
+        // Manejador del evento de cambio de ítem seleccionado en el ComboBox de categoría
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // You can access the selected category from the ComboBox like this:
+            // Puedes acceder a la categoría seleccionada del ComboBox de esta manera:
             string selectedCategory = categoriabox.SelectedItem?.ToString();
 
-            // Use the selected category as needed in your code
+            // Utilizar la categoría seleccionada según sea necesario en tu código
         }
 
-
+        // Manejador del evento Load del formulario(posiblemente duplicado)
         private void idsuplidortxt_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedSuplidor = idsuplidortxt.SelectedItem?.ToString();

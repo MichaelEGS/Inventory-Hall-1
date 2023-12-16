@@ -10,71 +10,71 @@ namespace Inventory_Hall
         {
             InitializeComponent();
 
-            KeyPreview = true; // Enable key preview for the form
-            KeyDown += (sender, e) => { if (e.KeyCode == Keys.Escape) Dispose(); };
+            KeyPreview = true; //Habilitar la vista previa de teclas para el formulario
+            KeyDown += (sender, e) => { if (e.KeyCode == Keys.Escape) Dispose(); }; // Cerrar el formulario si se presiona la tecla Escape
 
         }
 
 
 
-        //disposes the program , meaning it wont consume any resources since it is now completely closed 
+        
         private void btncerrar_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            this.Dispose(); // Liberar el formulario al hacer clic en el botón de cierre
         }
         //menustrip del menu principal (del primer form)
-        private void cONSULTAToolStripMenuItem_Click(object sender, EventArgs e)
+        private void cONSULTAToolStripMenuItem_Click(object sender, EventArgs e) // Código para manejar el clic en el elemento de menú CONSULTA
         {
 
         }
-        //calling form ( agr_producto)
-        private void pRODUCTOToolStripMenuItem_Click(object sender, EventArgs e)
+        
+        private void pRODUCTOToolStripMenuItem_Click(object sender, EventArgs e) // Abrir el formulario 'agrproducto' para agregar un nuevo producto
         {
             using (agrproducto agrproducto = new agrproducto())
             {
-                agrproducto.ShowDialog(); // Open the form as a modal dialog
+                agrproducto.ShowDialog(); // Abrir el formulario como un cuadro de diálogo
             }
         }
-        //calling form (agr_empleado)
+        // Abrir el formulario 'agrempleado' para agregar un nuevo empleado
         private void eMPLEADOToolStripMenuItem_Click(object sender, EventArgs e)
         {
             agrempleado agrempleado = new agrempleado();
-            agrempleado.ShowDialog();// here im using ( using ) bc its the right way 
+            agrempleado.ShowDialog(); 
 
         }
-        //calling form ( agr_suplidor )
+        // Abrir el formulario 'agrsuplidor' para ver la información del proveedor
         private void sUPLIDORToolStripMenuItem_Click(object sender, EventArgs e)
         {
             agrsuplidor agrsuplidor = new agrsuplidor();
             agrsuplidor.ShowDialog(); // here im just using showdialog to see if it works , later ill change it if it gives me any problems with the code 
         }
 
-        // calling form ( con_producto )
+        // Abrir el formulario 'conproducto' para ver la información del producto
         private void pRODUCTOToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             conproducto conproducto = new conproducto();
             conproducto.ShowDialog();
 
         }
-        //calling form ( con_empleado )
+        // Abrir el formulario 'conempleado' para ver la información del empleado
         private void eMPLEADOToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             conempleado conempleado = new conempleado();
             conempleado.ShowDialog();
         }
-        //calling form ( con_suplidor )
+        // Abrir el formulario 'consuplidor' para ver la información del proveedor
         private void sUPLIDORToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             consuplidor consuplidor = new consuplidor();
             consuplidor.ShowDialog();
         }
-
+        // Abrir el formulario 'prodistribucion' para la distribución de categorías
         private void dISTRIBUCIONDECATEGORIAToolStripMenuItem_Click(object sender, EventArgs e)
         {
             prodistribucion prodistribucion = new prodistribucion();
             prodistribucion.ShowDialog();
         }
-
+        // Abrir el formulario 'sisacercade' para mostrar información sobre el sistema
         private void aCERCADEToolStripMenuItem_Click(object sender, EventArgs e)
         {
             sisacercade sisacercade = new sisacercade();

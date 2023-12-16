@@ -37,30 +37,33 @@
             passwordlb = new Label();
             label1 = new Label();
             label2 = new Label();
-            pictureBox1 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             SuspendLayout();
             // 
             // loginbtn
             // 
+            loginbtn.BackColor = Color.FromArgb(0, 192, 0);
             loginbtn.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             loginbtn.Location = new Point(457, 349);
             loginbtn.Name = "loginbtn";
             loginbtn.Size = new Size(129, 67);
             loginbtn.TabIndex = 0;
             loginbtn.Text = "Iniciar Sesion";
-            loginbtn.UseVisualStyleBackColor = true;
+            loginbtn.UseVisualStyleBackColor = false;
             loginbtn.Click += loginbtn_Click;
             // 
             // cancelarbtn
             // 
+            cancelarbtn.BackColor = Color.FromArgb(192, 0, 0);
             cancelarbtn.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            cancelarbtn.ForeColor = Color.Black;
             cancelarbtn.Location = new Point(656, 349);
             cancelarbtn.Name = "cancelarbtn";
             cancelarbtn.Size = new Size(86, 67);
             cancelarbtn.TabIndex = 1;
             cancelarbtn.Text = "Cancelar";
-            cancelarbtn.UseVisualStyleBackColor = true;
+            cancelarbtn.UseVisualStyleBackColor = false;
             cancelarbtn.Click += cancelarbtn_Click;
             // 
             // usuariolb
@@ -69,9 +72,9 @@
             usuariolb.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             usuariolb.Location = new Point(587, 40);
             usuariolb.Name = "usuariolb";
-            usuariolb.Size = new Size(55, 17);
+            usuariolb.Size = new Size(59, 17);
             usuariolb.TabIndex = 2;
-            usuariolb.Text = "Usuario";
+            usuariolb.Text = "Usuario:";
             // 
             // usuariotxt
             // 
@@ -94,9 +97,9 @@
             passwordlb.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             passwordlb.Location = new Point(578, 211);
             passwordlb.Name = "passwordlb";
-            passwordlb.Size = new Size(77, 17);
+            passwordlb.Size = new Size(81, 17);
             passwordlb.TabIndex = 6;
-            passwordlb.Text = "Contraseña";
+            passwordlb.Text = "Contraseña:";
             // 
             // label1
             // 
@@ -104,7 +107,7 @@
             label1.Dock = DockStyle.Left;
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(378, 450);
+            label1.Size = new Size(391, 450);
             label1.TabIndex = 7;
             label1.Click += label1_Click;
             // 
@@ -112,21 +115,26 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.SteelBlue;
-            label2.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Font = new Font("Arial Rounded MT Bold", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(74, 51);
+            label2.Location = new Point(74, 50);
             label2.Name = "label2";
-            label2.Size = new Size(197, 24);
+            label2.Size = new Size(254, 32);
             label2.TabIndex = 8;
             label2.Text = "INVENTORY HALL";
             // 
-            // pictureBox1
+            // iconPictureBox1
             // 
-            pictureBox1.Location = new Point(120, 189);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 50);
-            pictureBox1.TabIndex = 9;
-            pictureBox1.TabStop = false;
+            iconPictureBox1.BackColor = Color.SteelBlue;
+            iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Store;
+            iconPictureBox1.IconColor = Color.White;
+            iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconPictureBox1.IconSize = 283;
+            iconPictureBox1.Location = new Point(45, 94);
+            iconPictureBox1.Name = "iconPictureBox1";
+            iconPictureBox1.Size = new Size(283, 290);
+            iconPictureBox1.TabIndex = 10;
+            iconPictureBox1.TabStop = false;
             // 
             // frmlogin
             // 
@@ -135,7 +143,7 @@
             BackColor = SystemColors.ControlLight;
             ClientSize = new Size(800, 450);
             ControlBox = false;
-            Controls.Add(pictureBox1);
+            Controls.Add(iconPictureBox1);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(passwordlb);
@@ -151,7 +159,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CONTROL DE ACCESO";
             Load += frmlogin_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -166,6 +174,6 @@
         private Label passwordlb;
         private Label label1;
         private Label label2;
-        private PictureBox pictureBox1;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
     }
 }
