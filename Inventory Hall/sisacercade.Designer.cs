@@ -29,25 +29,28 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(sisacercade));
-            groupBox1 = new GroupBox();
+            listBox1 = new ListBox();
             SuspendLayout();
             // 
-            // groupBox1
+            // listBox1
             // 
-            groupBox1.Location = new Point(239, 110);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(294, 192);
-            groupBox1.TabIndex = 0;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "hola aqui va info del sistema";
-            groupBox1.Enter += groupBox1_Enter_1;
+            listBox1.BackColor = SystemColors.InactiveCaption;
+            listBox1.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            listBox1.ForeColor = SystemColors.ActiveCaptionText;
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 18;
+            listBox1.Items.AddRange(new object[] { "Este software fue creado por: Jesus Acevedo 2020-2551, Steven Vasquez 2022-2125 y Michael Zorrilla 2022-2135.", "", "Las Herramientas fueron: SQL version 2019, IDE: Visual Studio version 2022 community, Frameworks: .NET7, lenguaje: C#.", "", "Este programa esta basado en un control de inventario que puede realizar entrada de productos,suplidores y empeleados", "", "al mismo tiempo podemos ver la distribucion de productos y se puede modificar la seccion del mismo y hacer la consulta de todos estos.", "", "Fue creado con el objetivo de proyecto final de la materia Programacion basica(ISW-122-50)" });
+            listBox1.Location = new Point(47, 42);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(1180, 526);
+            listBox1.TabIndex = 0;
             // 
             // sisacercade
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(groupBox1);
+            ClientSize = new Size(1291, 599);
+            Controls.Add(listBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "sisacercade";
             Text = "Acerca De";
@@ -56,6 +59,6 @@
 
         #endregion
 
-        private GroupBox groupBox1;
+        private ListBox listBox1;
     }
 }

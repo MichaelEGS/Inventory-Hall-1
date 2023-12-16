@@ -49,11 +49,11 @@
             // 
             btncerrar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btncerrar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btncerrar.Image = Properties.Resources._330399_bad_cancel_clear_close_decline_icon;
+            btncerrar.Image = Properties.Resources.icono_de_closet;
             btncerrar.ImageAlign = ContentAlignment.TopCenter;
-            btncerrar.Location = new Point(-110, 853);
+            btncerrar.Location = new Point(1730, 32);
             btncerrar.Name = "btncerrar";
-            btncerrar.Size = new Size(276, 74);
+            btncerrar.Size = new Size(150, 74);
             btncerrar.TabIndex = 0;
             btncerrar.Text = "CERRAR";
             btncerrar.TextAlign = ContentAlignment.BottomCenter;
@@ -67,7 +67,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { eNTRADAToolStripMenuItem, pROCESOToolStripMenuItem, cONSULTAToolStripMenuItem, sISTEMAToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(935, 29);
+            menuStrip1.Size = new Size(1892, 29);
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -162,7 +162,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MediumTurquoise;
             BackgroundImage = Properties.Resources.foto_de_fondo_principal;
-            ClientSize = new Size(935, 615);
+            ClientSize = new Size(1892, 1061);
             ControlBox = false;
             Controls.Add(btncerrar);
             Controls.Add(menuStrip1);
