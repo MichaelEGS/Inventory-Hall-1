@@ -27,13 +27,13 @@ namespace Inventory_Hall
             nombretxt.Enabled = true;
             rnctxt.Enabled = true;
             direcciontxt.Enabled = true;
-            emailtxt.Enabled = true;
+            emailtxt.Enabled = true;        // Habilitar la edición de campos al hacer clic en el botón "Insertar"
             telefonotxt.Enabled = true;
             descripciontxt.Enabled = true;
 
             nombretxt.BackColor = Color.White;
             rnctxt.BackColor = Color.White;
-            direcciontxt.BackColor = Color.White;
+            direcciontxt.BackColor = Color.White;       // Restablecer el color de fondo de los campos a blanco
             emailtxt.BackColor = Color.White;
             telefonotxt.BackColor = Color.White;
             descripciontxt.BackColor = Color.White;
@@ -48,8 +48,7 @@ namespace Inventory_Hall
         {
             try
             {
-                // Check if any of the required fields is empty
-                // Check if any of the required fields is empty
+                // Verificar si alguno de los campos requeridos está vacío
                 if (string.IsNullOrWhiteSpace(nombretxt.Text) ||
                     string.IsNullOrWhiteSpace(GetUnmaskedText(rnctxt)) ||
                     string.IsNullOrWhiteSpace(direcciontxt.Text) ||
@@ -58,35 +57,35 @@ namespace Inventory_Hall
                     string.IsNullOrWhiteSpace(descripciontxt.Text))
                 {
                     MessageBox.Show("Por favor llenar todos los campos.");
-                    return; // Exit the method without proceeding to database insertion
+                    return; // Salir del método sin proceder a la inserción en la base de datos
                 }
 
-
+                // Consulta SQL para insertar datos en la tabla "suplidor"
                 string insertQuery = "insert into suplidor (nombre, rnc, direccion, email, telefono, descripcion) " +
                     "VALUES (@nombre, @rnc, @direccion, @email, @telefono, @descripcion)";
 
                 using (SqlCommand command = new SqlCommand(insertQuery, databaseManager.GetConnection()))
                 {
-                    // Add parameters using AddWithValue
+                    // Agregar parámetros utilizando AddWithValue
                     command.Parameters.AddWithValue("@nombre", nombretxt.Text);
                     command.Parameters.AddWithValue("@direccion", direcciontxt.Text);
                     command.Parameters.AddWithValue("@email", emailtxt.Text);
 
-                    string rnc = rnctxt.Text.Replace(" ", ""); // Remove spaces or any other formatting
+                    string rnc = rnctxt.Text.Replace(" ", ""); // Eliminar espacios o cualquier otro formato del RNC
                     command.Parameters.AddWithValue("@rnc", rnc);
 
-                    string phoneNumber = telefonotxt.Text.Replace("-", ""); // Remove hyphens or any other formatting
+                    string phoneNumber = telefonotxt.Text.Replace("-", ""); // Eliminar guiones u otros formatos del número de teléfono
                     command.Parameters.AddWithValue("@telefono", phoneNumber);
 
                     command.Parameters.AddWithValue("@descripcion", descripciontxt.Text);
 
-                    // Execute the SQL command
+                    // Ejecutar el comando SQL
                     command.ExecuteNonQuery();
                 }
 
                 MessageBox.Show("Data insertada correctamente.");
 
-                nombretxt.Text = "";
+                nombretxt.Text = "";        // Limpiar los campos después de la inserción
                 rnctxt.Text = "";
                 direcciontxt.Text = "";
                 emailtxt.Text = "";
@@ -99,17 +98,17 @@ namespace Inventory_Hall
                 MessageBox.Show("ERROR HAS INSERTADO UN DATO MAL: " + ex.Message);
             }
         }
-
+        // Manejador de eventos MaskInputRejected para maskedTextBox1
         private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
         }
-
+        // Manejador de eventos MaskInputRejected para rnctxt
         private void rnctxt_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
         }
-
+        // Método para obtener el texto sin formato de un MaskedTextBox
         private string GetUnmaskedText(MaskedTextBox maskedTextBox)
         {
             string unmaskedText = maskedTextBox.Text;

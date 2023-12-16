@@ -46,7 +46,7 @@ namespace Inventory_Hall
         private void sUPLIDORToolStripMenuItem_Click(object sender, EventArgs e)
         {
             agrsuplidor agrsuplidor = new agrsuplidor();
-            agrsuplidor.ShowDialog(); // here im just using showdialog to see if it works , later ill change it if it gives me any problems with the code 
+            agrsuplidor.ShowDialog(); 
         }
 
         // Abrir el formulario 'conproducto' para ver la información del producto
