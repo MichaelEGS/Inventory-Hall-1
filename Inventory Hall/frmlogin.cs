@@ -33,21 +33,34 @@ namespace Inventory_Hall
 
             else
             {
-                if (usuariotxt.Text != "steven" && maskedcon.Text != "0785")
+                if (usuariotxt.Text != "michael" && maskedcon.Text != "123456")
                 {
                     MessageBox.Show("El usuario y la contraseña son incorrectas");
                 }
-                else if (usuariotxt.Text != "steven")
+                else if (usuariotxt.Text != "michael")
                 {
                     MessageBox.Show("El usuario es incorrecto");
                 }
-                else if (maskedcon.Text != "0785")
+                else if (maskedcon.Text != "123456")
                 {
                     MessageBox.Show("La contraseña es incorrecta");
                 }
             }
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void frmlogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

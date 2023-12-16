@@ -193,6 +193,36 @@ namespace Inventory_Hall.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap foto_de_login {
+            get {
+                object obj = ResourceManager.GetObject("foto de login", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap foto_de_login__1_ {
+            get {
+                object obj = ResourceManager.GetObject("foto de login (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap foto_de_login__2_ {
+            get {
+                object obj = ResourceManager.GetObject("foto de login (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap foto_para_imagen_de_fono_del_inventory_hall_ {
             get {
                 object obj = ResourceManager.GetObject("foto para imagen de fono del inventory hall ", resourceCulture);
@@ -236,6 +266,16 @@ namespace Inventory_Hall.Properties {
         internal static System.Drawing.Bitmap icono_de_closet {
             get {
                 object obj = ResourceManager.GetObject("icono de closet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap inventory_logoo_04 {
+            get {
+                object obj = ResourceManager.GetObject("inventory logoo 04", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
