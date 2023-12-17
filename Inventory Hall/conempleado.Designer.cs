@@ -123,9 +123,9 @@
             label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label2.Location = new Point(711, 378);
             label2.Name = "label2";
-            label2.Size = new Size(115, 17);
+            label2.Size = new Size(113, 17);
             label2.TabIndex = 5;
-            label2.Text = "Inserte Empleado";
+            label2.Text = "Buscar empleado";
             // 
             // conempleado
             // 

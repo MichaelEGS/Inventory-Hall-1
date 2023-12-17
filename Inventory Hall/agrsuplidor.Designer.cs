@@ -151,7 +151,7 @@
             insertarbtn.Name = "insertarbtn";
             insertarbtn.Size = new Size(75, 34);
             insertarbtn.TabIndex = 12;
-            insertarbtn.Text = "Insertar";
+            insertarbtn.Text = "Nuevo";
             insertarbtn.UseVisualStyleBackColor = false;
             insertarbtn.Click += insertarbtn_Click;
             // 

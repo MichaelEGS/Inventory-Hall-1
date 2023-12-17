@@ -104,9 +104,9 @@
             label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label2.Location = new Point(720, 386);
             label2.Name = "label2";
-            label2.Size = new Size(106, 17);
+            label2.Size = new Size(103, 17);
             label2.TabIndex = 5;
-            label2.Text = "Inserte Suplidor";
+            label2.Text = "Buscar suplidor";
             label2.Click += label2_Click;
             // 
             // consuplidor

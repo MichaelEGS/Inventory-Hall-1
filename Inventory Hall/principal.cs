@@ -2,79 +2,116 @@ using Microsoft.Data.SqlClient;
 using System;
 using System.Configuration;
 
+
+
 namespace Inventory_Hall
 {
     public partial class principal : Form
     {
+        private EnterMessageFilter enterFilter;
+
         public principal()
         {
             InitializeComponent();
 
-            KeyPreview = true; //Habilitar la vista previa de teclas para el formulario
-            KeyDown += (sender, e) => { if (e.KeyCode == Keys.Escape) Dispose(); }; // Cerrar el formulario si se presiona la tecla Escape
+            // Habilitar la vista previa de teclas para el formulario
+            KeyPreview = true;
 
+            // Crear e instalar el filtro para bloquear la tecla Enter
+            enterFilter = new EnterMessageFilter();
+            Application.AddMessageFilter(enterFilter);
+
+            // Manejar el evento KeyDown para evitar el cierre al presionar la tecla Enter o el espacio
+            KeyDown += (sender, e) =>
+            {
+                // Evitar el cierre del formulario al presionar la tecla Enter o el espacio
+                if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Space)
+                {
+                    e.Handled = true;
+                }
+                // Solo cerrar el formulario si se presiona la tecla Esc
+                else if (e.KeyCode == Keys.Escape)
+                {
+                    Dispose();
+                }
+            };
         }
 
+        public class EnterMessageFilter : IMessageFilter
+        {
+            public bool PreFilterMessage(ref Message m)
+            {
+                if (m.Msg == 0x0100) // WM_KEYDOWN
+                {
+                    if ((Keys)m.WParam == Keys.Enter)
+                    {
+                        return true; // Bloquear la tecla Enter
+                    }
+                }
+                return false;
+            }
+        }
 
-
-        
+        //disposes the program , meaning it wont consume any resources since it is now completely closed 
         private void btncerrar_Click(object sender, EventArgs e)
         {
-            this.Dispose(); // Liberar el formulario al hacer clic en el botón de cierre
+            Application.RemoveMessageFilter(enterFilter);
+
+            this.Dispose();
         }
         //menustrip del menu principal (del primer form)
-        private void cONSULTAToolStripMenuItem_Click(object sender, EventArgs e) // Código para manejar el clic en el elemento de menú CONSULTA
+        private void cONSULTAToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
-        
-        private void pRODUCTOToolStripMenuItem_Click(object sender, EventArgs e) // Abrir el formulario 'agrproducto' para agregar un nuevo producto
+        //calling form ( agr_producto)
+        private void pRODUCTOToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (agrproducto agrproducto = new agrproducto())
             {
-                agrproducto.ShowDialog(); // Abrir el formulario como un cuadro de diálogo
+                agrproducto.ShowDialog(); // Open the form as a modal dialog
             }
         }
-        // Abrir el formulario 'agrempleado' para agregar un nuevo empleado
+        //calling form (agr_empleado)
         private void eMPLEADOToolStripMenuItem_Click(object sender, EventArgs e)
         {
             agrempleado agrempleado = new agrempleado();
-            agrempleado.ShowDialog(); 
+            agrempleado.ShowDialog();
 
         }
-        // Abrir el formulario 'agrsuplidor' para ver la información del proveedor
+        //calling form ( agr_suplidor )
         private void sUPLIDORToolStripMenuItem_Click(object sender, EventArgs e)
         {
             agrsuplidor agrsuplidor = new agrsuplidor();
-            agrsuplidor.ShowDialog(); 
+            agrsuplidor.ShowDialog(); // here im just using showdialog to see if it works , later ill change it if it gives me any problems with the code 
         }
 
-        // Abrir el formulario 'conproducto' para ver la información del producto
+        // Llamada al formulario agrproducto al hacer clic en el menú "PRODUCTO"
         private void pRODUCTOToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             conproducto conproducto = new conproducto();
-            conproducto.ShowDialog();
+            conproducto.ShowDialog();   // Abre el formulario como un cuadro de diálogo modal
 
         }
-        // Abrir el formulario 'conempleado' para ver la información del empleado
+        // Llamada al formulario agrempleado al hacer clic en el menú "EMPLEADO"
         private void eMPLEADOToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             conempleado conempleado = new conempleado();
             conempleado.ShowDialog();
         }
-        // Abrir el formulario 'consuplidor' para ver la información del proveedor
+        // Llamada al formulario agrsuplidor al hacer clic en el menú "SUPLIDOR"
         private void sUPLIDORToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             consuplidor consuplidor = new consuplidor();
             consuplidor.ShowDialog();
         }
-        // Abrir el formulario 'prodistribucion' para la distribución de categorías
+        // Evento para abrir el formulario de distribución de categorías
         private void dISTRIBUCIONDECATEGORIAToolStripMenuItem_Click(object sender, EventArgs e)
         {
             prodistribucion prodistribucion = new prodistribucion();
             prodistribucion.ShowDialog();
         }
-        // Abrir el formulario 'sisacercade' para mostrar información sobre el sistema
+        // Evento para abrir el formulario "Acerca de"
         private void aCERCADEToolStripMenuItem_Click(object sender, EventArgs e)
         {
             sisacercade sisacercade = new sisacercade();
